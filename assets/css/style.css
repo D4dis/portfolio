@@ -66,6 +66,10 @@ ul {
   gap: 65px;
 }
 
+.navbar .links li:hover {
+  color: #12f7d548;
+}
+
 .navbar .active {
   color: #12F7D6;
 }
