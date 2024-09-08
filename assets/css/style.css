@@ -64,10 +64,15 @@ ul {
 
 .navbar .links {
   gap: 65px;
+  color: #FFF;
+}
+
+.navbar .links li {
+  transition: 0.3s;
 }
 
 .navbar .links li:hover {
-  color: #12f7d548;
+  color: #12f7d57e;
 }
 
 .navbar .active {
