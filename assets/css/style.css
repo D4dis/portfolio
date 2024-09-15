@@ -62,17 +62,31 @@ ul {
   justify-content: space-between;
 }
 
-.navbar .links {
+.navbar .left span {
+  color: #12F7D6;
+  margin-right: 10px;
+}
+
+.navbar .left h1 {
+  color: #FFF;
+}
+
+.navbar .right .links {
   gap: 65px;
   color: #FFF;
 }
 
-.navbar .links li {
+.navbar .right .links li {
   transition: 0.3s;
 }
 
-.navbar .links li:hover {
+.navbar .right .links li:hover {
   color: #12f7d57e;
+}
+
+.navbar .right .links .fa-brands {
+  margin-right: 10px;
+  color: #12F7D6;
 }
 
 .navbar .active {
@@ -103,8 +117,7 @@ ul {
 .main-page img {
   width: 96px;
   height: 96px;
-  border-radius: 50px;
-  border: 1px solid #12F7D6;
+  clip-path: circle(37%);
 }
 
 
