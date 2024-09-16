@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="assets/img/dev-logo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -23,25 +24,29 @@
       <div class="right">
         <ul class="links d-flex">
           <a href="#home">
-            <li class="home">Home</li>
+            <li class="item-nav">Home</li>
           </a>
           <a href="#projets">
-            <li class="projets">Projets</li>
+            <li class="item-nav">Projets</li>
           </a>
-          <li class="search-bar">
-            <form method="get">
-              <input type="text" name="search" id="">
-              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
+          <li class="search-group">
+            <div class="search-bar">
+              <div class="row">
+                <input type="text" name="search" id="search" autocomplete="off">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+              <div class="result-box">
+              </div>
+            </div>
           </li>
           <a href="">
-            <li><i class="fa-brands fa-instagram"></i>Instagram</li>
+            <li class="social item-nav"><i class="fa-brands fa-instagram"></i>Instagram</li>
           </a>
           <a href="">
-            <li><i class="fa-brands fa-discord"></i>Discord</li>
+            <li class="social item-nav"><i class="fa-brands fa-discord"></i>Discord</li>
           </a>
           <a href="https://github.com/D4dis/">
-            <li><i class="fa-brands fa-github"></i>Github</li>
+            <li class="social item-nav"><i class="fa-brands fa-github"></i>Github</li>
           </a>
         </ul>
       </div>
@@ -58,12 +63,10 @@
       <div class="top justify-center text-center">
         <h2>Developpeur</h2>
       </div>
-      <div class="bot d-flex justify-center">
+      <div class="bot d-flex justify-between">
         <div class="left">
           <div class="card">
-            <img
-              src="assets/img/dev-logo.webp"
-              alt="">
+            <img src="assets/img/dev-logo.webp" alt="">
             <h1>Daris</h1>
             <p>Développeur Junior</p>
             <div class="d-flex flex-column">
@@ -193,7 +196,7 @@
     </div>
   </footer>
 
-
+  <script src="assets/js/script.js" defer></script>
 </body>
 
 </html>
