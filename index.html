@@ -24,7 +24,7 @@
         <div class="right">
             <ul class="links d-flex">
                 <a href="#home">
-                    <li class="item-nav">Home</li>
+                    <li class="item-nav">Acceuil</li>
                 </a>
                 <a href="#projets">
                     <li class="item-nav">Projets</li>
@@ -61,45 +61,50 @@
 <section class="main-page" id="home">
     <div class="container m-auto d-flex flex-column">
         <div class="top justify-center text-center">
-            <h2>Developpeur</h2>
+            <h2>Développeur</h2>
         </div>
         <div class="bot d-flex justify-between">
             <div class="left">
-                <div class="card">
-                    <img src="assets/img/dev-logo.webp" alt="">
+                <div class="card d-flex flex-column align-center">
+                    <img src="assets/img/dev-logo-removebg-preview.png" alt="">
                     <h1>Daris</h1>
                     <p>Développeur Junior</p>
-                    <div class="d-flex flex-column">
+                    <div class="coord d-flex flex-column">
                         <div class="d-flex">
-                            <i class="fa-regular fa-envelope"></i>
+                            <i class="icon fa-regular fa-envelope"></i>
                             <p>daris.knc@gmail.com</p>
                         </div>
                         <div class="d-flex">
-                            <i class="fa-solid fa-location-dot"></i>
+                            <i class="icon fa-solid fa-location-dot"></i>
                             <p>France</p>
                         </div>
                         <div class="d-flex">
-                            <i class="fa-solid fa-suitcase"></i>
+                            <i class="icon fa-solid fa-suitcase"></i>
                             <p>Stage</p>
                         </div>
                         <div class="d-flex">
-                            <i class="fa-solid fa-link"></i>
-                            <p>www.darisknc.com</p>
+                            <i class="icon fa-solid fa-link"></i>
+                            <p><a href="#">www.darisknc.fr</a></p>
                         </div>
+                        <a href="#">Télécharger le CV</a>
                     </div>
                 </div>
             </div>
             <div class="mid">
                 <span>&lt;h1&gt;</span>
-                <h1>Salut, Je suis <span>Daris</span>, Developpeur Junior<span>&lt;h1/&gt;</span></h1>
+                <h1>Salut, Je suis <span class="txt">Daris</span>, Développeur Junior<span class="margin">&lt;/h1&gt;</span></h1>
                 <span>&lt;p&gt;</span>
                 <p>I help business grow by crafting amazing web experiences. If you’re looking for a developer that
                     likes to
                     get stuff done,</p>
-                <span>&lt;p/&gt;</span>
-                <a href="#contact">Contactez moi
-                    <div class="round"><i class="fa-regular fa-envelope"></i></div>
-                </a>
+                <span>&lt;/p&gt;</span>
+                <div class="contact-item d-flex align-center">
+                    <p class="contact">Contactez moi</p>
+                    <div class="round">
+                        <a href="#contact"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </div>
+
             </div>
             <div class="right d-flex align-center justify-center">
                 <div class="container-sm d-flex flex-column">
@@ -190,9 +195,12 @@
         <h2>Contact</h2>
         <p></p>
         <form action="" method="post">
-            <input type="text" name="" id="">
-            <input type="email" name="" id="">
-            <textarea name="" id=""></textarea>
+            <label for="name">Votre nom</label>
+            <input type="text" name="name" id="name" placeholder="Entrer votre nom">
+            <label for="mail">Votre email</label>
+            <input type="email" name="mail" id="mail" placeholder="Entrer votre email">
+            <label for="msg">Votre message</label>
+            <textarea name="msg" id="msg" placeholder="Entrer votre message"></textarea>
             <button type="submit">Envoyer</button>
         </form>
     </div>
