@@ -20,6 +20,7 @@ ul {
 
 .container {
     max-width: 1664px;
+    padding: 0 128px;
     width: 100%;
     margin: auto;
 }
@@ -209,15 +210,9 @@ ul {
 
 .main-page {
     width: 100%;
-    height: 1080px;
+    height: 910px;
     background-color: #292F36;
 }
-
-.main-page .container {
-    padding: 0 128px;
-}
-
-
 
 .main-page .top {
     margin-top: 64px;
@@ -231,16 +226,12 @@ ul {
     color: #98FAEC;
 }
 
-/*.main-page .bot {*/
-/*    gap: 80px;*/
-/*}*/
-
 .main-page .bot .right {
     width: 215px;
     height: 378px;
     background-color: #1A1E23;
     border-radius: 80px;
-    margin-top: 64px;
+    margin-top: 110px;
 }
 
 .main-page .bot .right .container-sm {
@@ -265,7 +256,7 @@ ul {
 }
 
 .main-page .bot .mid {
-    margin-top: 64px;
+    margin-top: 110px;
     width: 745px;
     display: flex;
     flex-direction: column;
@@ -336,6 +327,7 @@ ul {
 }
 
 .main-page .bot .left {
+    margin-top: 64px;
     width: 320px;
     height: 520px;
 }
@@ -353,8 +345,10 @@ ul {
 .main-page .bot .left .card img {
     width: 96px;
     height: 96px;
-    border: 1px solid #12F7D6;
     border-radius: 50%;
+    border: 4px solid #12F7D6;
+    margin-top: 40px;
+    margin-bottom: 16px;
 }
 
 .main-page .bot .left .card h1 {
@@ -371,11 +365,117 @@ ul {
     margin-bottom: 32px;
 }
 
+.main-page .bot .left .card .coord {
+    width: 100%;
+    padding-left: 24px;
+}
+
 .main-page .bot .left .card .coord p {
-    margin-bottom: 0;
+    margin-bottom: 16px;
+
+}
+
+.main-page .bot .left .card .coord .d-flex {
+    gap: 16px;
 }
 
 .main-page .bot .left .card .icon {
     color: #12F7D6;
 }
 
+.main-page .bot .left .card a.btn {
+    padding: 12px 20px;
+    background-color: #FFF;
+    border-radius: 32px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.main-page .bot .left .card a.btn:hover {
+    background-color: #ffffff5e;
+}
+
+.main-page .bot .left .card a.btn i {
+    margin-left: 5px;
+}
+
+.main-page .bot .left .card .language {
+    gap: 16px;
+}
+
+.main-page .bot .left .card .language .card-item {
+    background-color: #12F7D6;
+    border-radius: 8px;
+    padding: 0 3px;
+    margin-bottom: 32px;
+}
+
+.main-page .bot .left .card .language .card-item p.txt {
+    font-size: 'IBM Plex Mono', monospace;
+    color: #000;
+    margin: 0;
+}
+
+/* A PROPOS */
+
+.apropos {
+    width: 100%;
+    height: 1080px;
+    background-image: url(../img/About-me.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.apropos .container .left {
+    gap: 64px;
+}
+
+.apropos span {
+    font-size: 14px;
+    font-family: "IBM Plex Mono", monospace;
+    color: #98FAEC;
+}
+
+.apropos .container .left .top {
+    width: 360px;
+    background-color: #292F36;
+    border: 4px solid #12F7D6;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 10px 0;
+}
+
+.apropos .container .left .top h2 {
+    text-align: center;
+    font-size: 64px;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.apropos .container .left .bot {
+    width: 880px;
+    background-color: #292F36;
+    border-radius: 40px;
+    padding: 24px 40px;
+}
+
+.apropos .container .left .bot .txt {
+    color: #FFF;
+    font-family: "IBM Plex Mono", monospace;
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.apropos .container .left .bot .txt p {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.apropos .container .left .bot .txt p.title {
+    font-size: 32px;
+    color: #98FAEC;
+    font-weight: 500;
+}
+
+.apropos .container .left .bot .txt p span {
+    font-size: 16px;
+}
