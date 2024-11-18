@@ -2,246 +2,274 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daris Kenouche</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="assets/img/favicon-laptop.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daris Kenouche</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="assets/img/favicon-laptop.png" type="image/x-icon">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container-nav m-auto d-flex align-center">
-            <div class="left d-flex align-center">
-                <span>&lt;C/&gt;</span>
-                <h1>DarisKenouche</h1>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container-nav m-auto d-flex align-center">
+      <div class="left d-flex align-center">
+        <span>&lt;C/&gt;</span>
+        <h1>DarisKenouche</h1>
+      </div>
+      <div class="right">
+        <ul class="links d-flex">
+          <a href="#home">
+            <li class="item-nav">Acceuil</li>
+          </a>
+          <a href="#projets">
+            <li class="item-nav">Projets</li>
+          </a>
+          <li class="search-group">
+            <div class="search-bar">
+              <div class="row">
+                <input type="text" name="search" id="search" autocomplete="off">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+              <div class="result-box">
+              </div>
             </div>
-            <div class="right">
-                <ul class="links d-flex">
-                    <a href="#home">
-                        <li class="item-nav">Acceuil</li>
-                    </a>
-                    <a href="#projets">
-                        <li class="item-nav">Projets</li>
-                    </a>
-                    <li class="search-group">
-                        <div class="search-bar">
-                            <div class="row">
-                                <input type="text" name="search" id="search" autocomplete="off">
-                                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                            </div>
-                            <div class="result-box">
-                            </div>
-                        </div>
-                    </li>
-                    <a href="">
-                        <li class="social"><i class="fa-brands fa-instagram"></i>Instagram</li>
-                    </a>
-                    <a href="">
-                        <li class="social"><i class="fa-brands fa-discord"></i>Discord</li>
-                    </a>
-                    <a href="https://github.com/D4dis/">
-                        <li class="social"><i class="fa-brands fa-github"></i>Github</li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="bg-line">
-        <div class="line m-auto"></div>
+          </li>
+          <!-- <a href="">
+            <li class="social"><i class="fa-brands fa-instagram"></i>Instagram</li>
+          </a> -->
+          <a href="">
+            <li class="social"><i class="fa-brands fa-discord"></i>Discord</li>
+          </a>
+          <a href="https://github.com/D4dis/">
+            <li class="social"><i class="fa-brands fa-github"></i>Github</li>
+          </a>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- MAIN-PAGE -->
-    <section class="main-page" id="home">
-        <div class="container m-auto d-flex flex-column">
-            <div class="top justify-center text-center">
-                <h2>Développeur Web</h2>
-            </div>
-            <div class="bot d-flex justify-between">
-                <div class="left">
-                    <div class="card d-flex flex-column align-center">
-                        <img src="assets/img/dev-logo.webp" alt="">
-                        <h1>Daris</h1>
-                        <p>Développeur Web Junior</p>
-                        <div class="coord d-flex flex-column">
-                            <div class="d-flex">
-                                <i class="icon fa-regular fa-envelope"></i>
-                                <p>daris.knc@gmail.com</p>
-                            </div>
-                            <div class="d-flex">
-                                <i class="icon fa-solid fa-location-dot"></i>
-                                <p>France</p>
-                            </div>
-                            <div class="d-flex">
-                                <i class="icon fa-solid fa-suitcase"></i>
-                                <p>Stage / Alternance</p>
-                            </div>
-                            <div class="d-flex">
-                                <i class="icon fa-solid fa-link"></i>
-                                <p><a href="#">www.darisknc.fr</a></p>
-                            </div>
-                        </div>
-                        <div class="language d-flex justify-center">
-                            <div class="card-item">
-                                <p class="txt">HTML</p>
-                            </div>
-                            <div class="card-item">
-                                <p class="txt">CSS</p>
-                            </div>
-                            <div class="card-item">
-                                <p class="txt">PHP</p>
-                            </div>
-                            <div class="card-item">
-                                <p class="txt">SQL</p>
-                            </div>
-                        </div>
-                        <a href="./assets/pdf/CV_Stage_Daris_Kenouche.pdf" class="btn"
-                            download="darisknc_CV">Télécharger le CV<i class="fa-solid fa-download"></i></a>
-                    </div>
-                </div>
-                <div class="mid">
-                    <span>&lt;h1&gt;</span>
-                    <h1>Salut, Je suis <span class="txt">Daris</span>, Développeur Junior<span
-                            class="margin">&lt;/h1&gt;</span></h1>
-                    <span>&lt;p&gt;</span>
-                    <p>J'aide les entreprises à se développer en créant des expériences Web exceptionnelles. Si vous
-                        recherchez un développeur qui aime faire avancer les choses,</p>
-                    <span>&lt;/p&gt;</span>
-                    <div class="contact-item d-flex align-center">
-                        <p class="contact">Contactez moi</p>
-                        <div class="round">
-                            <a href="#contact"><i class="fa-regular fa-envelope"></i></a>
-                        </div>
-                    </div>
+  <div class="bg-line">
+    <div class="line m-auto"></div>
+  </div>
 
-                </div>
-                <div class="right d-flex align-center justify-center">
-                    <div class="container-sm d-flex flex-column">
-                        <div class="d-flex item">
-                            <span>4</span>
-                            <p>Language de programmation</p>
-                        </div>
-                        <div class="d-flex item">
-                            <span>5</span>
-                            <p>Outils de développement</p>
-                        </div>
-                        <div class="d-flex item">
-                            <span>0</span>
-                            <p>Année d'experience</p>
-                        </div>
-                    </div>
-                </div>
+  <!-- MAIN-PAGE -->
+  <section class="main-page" id="home">
+    <div class="container m-auto d-flex flex-column">
+      <div class="top justify-center text-center">
+        <h2>Développeur Web</h2>
+      </div>
+      <div class="bot d-flex justify-between">
+        <div class="left">
+          <div class="card d-flex flex-column align-center">
+            <img src="assets/img/dev-logo.webp" alt="">
+            <h1>Daris</h1>
+            <p>Développeur Web Junior</p>
+            <div class="coord d-flex flex-column">
+              <div class="d-flex">
+                <i class="icon fa-regular fa-envelope"></i>
+                <p>daris.knc@gmail.com</p>
+              </div>
+              <div class="d-flex">
+                <i class="icon fa-solid fa-location-dot"></i>
+                <p>France</p>
+              </div>
+              <div class="d-flex">
+                <i class="icon fa-solid fa-suitcase"></i>
+                <p>Stage / Alternance</p>
+              </div>
+              <div class="d-flex">
+                <i class="icon fa-solid fa-link"></i>
+                <p><a href="#">www.darisknc.fr</a></p>
+              </div>
             </div>
+            <div class="language d-flex justify-center">
+              <div class="card-item">
+                <p class="txt">HTML</p>
+              </div>
+              <div class="card-item">
+                <p class="txt">CSS</p>
+              </div>
+              <div class="card-item">
+                <p class="txt">PHP</p>
+              </div>
+              <div class="card-item">
+                <p class="txt">SQL</p>
+              </div>
+            </div>
+            <a href="./assets/pdf/CV_Stage_Daris_Kenouche.pdf" class="btn" download="darisknc_CV">Télécharger le CV<i
+                class="fa-solid fa-download"></i></a>
+          </div>
         </div>
-    </section>
+        <div class="mid">
+          <span>&lt;h1&gt;</span>
+          <h1>Salut, Je suis <span class="txt">Daris</span>, Développeur Junior<span class="margin">&lt;/h1&gt;</span>
+          </h1>
+          <span>&lt;p&gt;</span>
+          <p>J'aide les entreprises à se développer en créant des expériences Web exceptionnelles. Si vous
+            recherchez un développeur qui aime faire avancer les choses,</p>
+          <span>&lt;/p&gt;</span>
+          <div class="contact-item d-flex align-center">
+            <p class="contact">Contactez moi</p>
+            <div class="round">
+              <a href="#contact"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+          </div>
 
-    <!-- A PROPOS -->
-    <section class="apropos" id="apropos">
-        <div class="container d-flex justify-center align-center">
-            <div class="left d-flex flex-column">
-                <div class="top">
-                    <h2>À propos</h2>
-                </div>
-                <div class="bot">
-                    <span>&lt;p&gt;</span>
-                    <div class="d-flex flex-column txt">
-                        <p class="title">Bonjour !</p>
-                        <p>Mon nom est Daris et je suis développeur web avec de solide connaissance en
-                            <span>HTML</span>, <span>CSS</span>, <span>PHP</span>, et <span>SQL</span> etc.
-                        </p>
-                        <p>Je suis une personne très motivée et optimiste, qui se consacre à l'écriture de
-                            code clair, concis et qui fonctionne. Je m'efforce de ne jamais cesser d'apprendre
-                            et de m'améliorer.</p>
-                        <p>Quand je ne code pas, Je joue aux <span>jeux vidéos</span>, lis, ou passe du temps avec
-                            ma <span>famille</span>.</p>
-                    </div>
-                    <span>&lt;p/&gt;</span>
-                </div>
-            </div>
-            <div class="right">
-                <img src="assets/img/Image.png" alt="">
-            </div>
         </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="skills" id="skills">
-        <div class="container d-flex flex-column justify-center align-center">
-            <div class="top d-flex flex-column">
-                <h2>Skills</h2>
+        <div class="right d-flex align-center justify-center">
+          <div class="container-sm d-flex flex-column">
+            <div class="d-flex item">
+              <span>4</span>
+              <p>Language de programmation</p>
             </div>
-            <div class="mid">
-                <div class="mini-card"></div>
+            <div class="d-flex item">
+              <span>5</span>
+              <p>Outils de développement</p>
             </div>
-            <div class="bot">
-                <div class="d-flex">
-                    <div class="bg-round"><i class="fa-brands fa-html5"></i>
-                        <p>html</p>
-                    </div>
-                    <div class="bg-round"><i class="fa-brands fa-css3-alt"></i>
-                        <p>css</p>
-                    </div>
-                    <div class="bg-round"><i class="fa-brands fa-php"></i>
-                        <p></p>php
-                    </div>
-                    <div class="bg-round"><i class="fa-solid fa-database"></i>
-                        <p>sql</p>
-                    </div>
-                </div>
+            <div class="d-flex item">
+              <span>0</span>
+              <p>Année d'experience</p>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- PROJETS -->
-    <section class="projets" id="projets">
-        <div class="container d-flex flex-column">
-            <h2>Projets</h2>
-            <p>J'ai eu l'honneur de travailler sur ces projets</p>
-            <div class="left"></div>
-            <div class="mid">
-                <div><a href="">Voir Site<i class="fa-solid fa-arrow-pointer"></i></a></div>
-                <div><img src="assets/img/Dual-screen.png" alt=""></div>
-            </div>
-            <div class="right"></div>
+  <!-- A PROPOS -->
+  <section class="apropos" id="apropos">
+    <div class="container d-flex justify-center align-center">
+      <div class="left d-flex flex-column">
+        <div class="top">
+          <h2>À propos</h2>
         </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p></p>
-            <form action="" method="post">
-                <label for="name">Votre nom</label>
-                <input type="text" name="name" id="name" placeholder="Entrer votre nom">
-                <label for="mail">Votre email</label>
-                <input type="email" name="mail" id="mail" placeholder="Entrer votre email">
-                <label for="msg">Votre message</label>
-                <textarea name="msg" id="msg" placeholder="Entrer votre message"></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
+        <div class="bot">
+          <span>&lt;p&gt;</span>
+          <div class="d-flex flex-column txt">
+            <p class="title">Bonjour !</p>
+            <p>Mon nom est Daris et je suis développeur web avec de solide connaissance en
+              <span>HTML</span>, <span>CSS</span>, <span>PHP</span>, et <span>SQL</span> etc.
+            </p>
+            <p>Je suis une personne très motivée et optimiste, qui se consacre à l'écriture de
+              code clair, concis et qui fonctionne. Je m'efforce de ne jamais cesser d'apprendre
+              et de m'améliorer.</p>
+            <p>Quand je ne code pas, Je joue aux <span>jeux vidéos</span>, lis, ou passe du temps avec
+              ma <span>famille</span>.</p>
+          </div>
+          <span>&lt;p/&gt;</span>
         </div>
-    </section>
+      </div>
+      <div class="right">
+        <img src="assets/img/Image.png" alt="">
+      </div>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container d-flex align-center">
-            <p>&amp;2024 DarisKenouche. All rights reserved.</p>
-            <div class="icons">
-                <a href="" class="icon"><i class="fa-brands fa-instagram"></i></a>
-                <a href="" class="icon"><i class="fa-brands fa-discord"></i></a>
-                <a href="" class="icon"><i class="fa-brands fa-github"></i></a>
-            </div>
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="container d-flex flex-column justify-center align-center">
+      <div class="top d-flex flex-column">
+        <h2>Skills</h2>
+        <div class="d-flex justify-center">
+          <div class="lineDot"></div>
         </div>
-    </footer>
+        <p>J'aime apprendre et m'améliorer</p>
+      </div>
+      <div class="mid mini-cards d-flex">
+        <button id="web">
+          <div class="mini-card d-flex flex-column align-center">
+            <i class="fa-solid fa-desktop"></i>
+            <h3>Developpement Web</h3>
+            <p>HTML · CSS · PHP · JS · SQL</p>
+          </div>
+        </button>
+        <button id="plugin">
+          <div class="mini-card d-flex flex-column align-center">
+            <i class="fa-solid fa-gamepad"></i>
+            <h3>Plugin jeux vidéos</h3>
+            <p>ROCKET LEAGUE · </p>
+          </div>
+        </button>
+      </div>
+      <div class="bot d-flex justify-center">
+        <div class="comp d-flex justify-center">
+          <div class="bg-round d-flex flex-column align-center"><i class="fa-brands fa-html5"></i>
+            <p>html</p>
+          </div>
+        </div>
+        <div class="comp d-flex justify-center">
+          <div class="bg-round d-flex flex-column align-center"><i class="fa-brands fa-css3-alt"></i>
+            <p>css</p>
+          </div>
+        </div>
+        <div class="comp d-flex justify-center">
+          <div class="bg-round d-flex flex-column align-center"><i class="fa-brands fa-php"></i>
+            <p>php</p>
+          </div>
+        </div>
+        <div class="comp d-flex justify-center">
+          <div class="bg-round d-flex flex-column align-center"><i class="fa-brands fa-square-js"></i>
+            <p>js</p>
+          </div>
+        </div>
+        <div class="comp d-flex justify-center">
+          <div class="bg-round d-flex flex-column align-center"><i class="fa-solid fa-database"></i>
+            <p>sql</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="assets/js/script.js" defer></script>
+  <!-- PROJETS -->
+  <section class="projets" id="projets">
+    <div class="container d-flex flex-column">
+      <h2>Projets</h2>
+      <p>J'ai eu l'honneur de travailler sur ces projets</p>
+      <div class="left"></div>
+      <div class="mid">
+        <div><a href="">Voir Site<i class="fa-solid fa-arrow-pointer"></i></a></div>
+        <div><img src="assets/img/Dual-screen.png" alt=""></div>
+      </div>
+      <div class="right"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p></p>
+      <form action="" method="post">
+        <label for="name">Votre nom</label>
+        <input type="text" name="name" id="name" placeholder="Entrer votre nom">
+        <label for="mail">Votre email</label>
+        <input type="email" name="mail" id="mail" placeholder="Entrer votre email">
+        <label for="msg">Votre message</label>
+        <textarea name="msg" id="msg" placeholder="Entrer votre message"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container d-flex align-center">
+      <p>&amp;2024 DarisKenouche. All rights reserved.</p>
+      <div class="icons">
+        <a href="" class="icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="" class="icon"><i class="fa-brands fa-discord"></i></a>
+        <a href="" class="icon"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
 </body>
 
 </html>
