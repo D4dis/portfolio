@@ -59,6 +59,14 @@ ul {
   align-items: center;
 }
 
+.hidden {
+  opacity: 0;
+}
+
+nav.scrolled {
+  height: 70px;
+}
+
 .secTitle {
   font-size: 64px;
   font-weight: 400;
@@ -110,10 +118,14 @@ ul {
 /* NAVBAR */
 
 .navbar {
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 170px;
   background-color: #292F36;
   font-family: "IBM Plex Mono", monospace;
+  transition: 0.3s;
+  z-index: 999999999;
 }
 
 .navbar .container-nav {
@@ -162,7 +174,7 @@ ul {
 }
 
 .navbar .right .links li .search-bar {
-  width: 200px;
+  width: 220px;
   background: #FFF;
   border-radius: 5px;
 }
@@ -186,6 +198,10 @@ ul {
 .navbar .right .links li .search-bar button {
   background: transparent;
   border: 0;
+}
+
+.navbar .right .links li .search-bar button:first-of-type {
+  margin-right: 15px;
 }
 
 .navbar .right .links li.search-group {
@@ -480,7 +496,7 @@ ul {
 }
 
 .apropos .container .left .top {
-  width: 360px;
+  width: 550px;
   background-color: #292F36;
   border: 4px solid #12F7D6;
   border-top-left-radius: 50px;
@@ -496,7 +512,6 @@ ul {
 }
 
 .apropos .container .left .bot {
-  width: 880px;
   background-color: #292F36;
   border-radius: 40px;
   padding: 24px 40px;
@@ -536,8 +551,7 @@ ul {
 }
 
 .skills .container {
-  padding-top: 128px;
-  padding-bottom: 128px;
+  padding: 128px;
   gap: 64px;
 }
 
@@ -661,3 +675,68 @@ ul {
   width: 100%;
   background-image: url(../img/Works.png);
 }
+
+.projets .container {
+  padding: 128px 0;
+  gap: 64px;
+}
+
+.projets .top {
+  gap: 16px;
+}
+
+.projets .top p {
+  font-family: 'IMB Plex Mono', monospace;
+  color: #FFF;
+}
+
+.projets .bottom a {
+  position: relative;
+  left: 500px;
+  top: 90px;
+  color: #12F7D6;
+  font-family: 'IMB Plex Mono', monospace;
+  font-size: 24px;
+  text-decoration: underline;
+  text-decoration-color: #FFF;
+  text-underline-offset: 10px;
+  transition: 0.3s;
+}
+
+.projets .bottom a:hover {
+  color: #12f7d596;
+  text-decoration-color: #ffffff60;
+}
+
+.projets .bottom a>i {
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.projets .screen {
+  gap: 64px;
+}
+
+.projets .screen button {
+  width: 72px;
+  height: 72px;
+  background-color: #292F36;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.projets .screen button:hover {
+  background-color: #6e7a86;
+}
+
+.projets .screen i {
+  color: #FFF;
+  font-size: 24px;
+}
+
+
+/* CONTACT */
+
