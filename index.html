@@ -19,21 +19,24 @@
     <div class="container-nav m-auto d-flex align-center">
       <div class="left d-flex align-center">
         <span>&lt;C/&gt;</span>
-        <a href="#home" id="homeBtn"><h1>DarisKenouche</h1></a>
+        <a href="#home" id="homeBtn">
+          <h1>DarisKenouche</h1>
+        </a>
       </div>
       <div class="right">
         <ul class="links d-flex">
           <a href="#home" id="homeBtn2">
             <li class="item-nav">Acceuil</li>
           </a>
-          <a href="#projets">
+          <a href="#projets" id="projetsBtn">
             <li class="item-nav">Projets</li>
           </a>
           <li class="search-group">
             <div class="search-bar">
               <div class="row">
                 <input type="text" name="search" id="search" autocomplete="off">
-                <button class="hidden" type="button" onclick="suppInput()" id="suppInput"><i class="fa-solid fa-xmark"></i></button>
+                <button class="hidden" type="button" onclick="suppInput()" id="suppInput"><i
+                    class="fa-solid fa-xmark"></i></button>
                 <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
               </div>
               <div class="result-box">
@@ -56,6 +59,17 @@
 
   <div class="bg-line">
     <div class="line m-auto"></div>
+  </div>
+
+  <!-- TRAVEL BUTTON -->
+  <div class="travel">
+    <div class="icons d-flex flex-column align-center justify-center">
+      <div class="bubble" id="homeBtn4"><a href="#home" class="d-flex justify-center align-center"><i class="fa-solid fa-house"></i></a></div>
+      <div class="bubble" id="proposBtn"><a href="#apropos" class="d-flex justify-center align-center"><i class="fa-solid fa-user"></i></a></div>
+      <div class="bubble" id="skillsBtn"><a href="#skills" class="d-flex justify-center align-center"><i class="fa-solid fa-code"></i></a></div>
+      <div class="bubble" id="projetsBtn2"><a href="#projets" class="d-flex justify-center align-center"><i class="fa-solid fa-desktop"></i></a></div>
+      <div class="bubble" id="contactBtn"><a href="#contact" class="d-flex justify-center align-center"><i class="fa-solid fa-envelope"></i></a></div>
+    </div>
   </div>
 
   <!-- MAIN-PAGE -->
@@ -115,7 +129,7 @@
             recherchez un développeur qui aime faire avancer les choses,</p>
           <span>&lt;/p&gt;</span>
           <div class="contact-item d-flex align-center">
-            <p class="contact">Contactez moi</p>
+            <p class="contactTxt">Contactez moi</p>
             <div class="round">
               <a href="#contact"><i class="fa-regular fa-envelope"></i></a>
             </div>
@@ -232,7 +246,7 @@
     <div class="container d-flex flex-column justify-center align-center">
       <div class="top d-flex flex-column justify-center align-center">
         <h2 class="secTitle">Projets</h2>
-        <div class="lineDot"></div>
+        <div class="lineDot" style="width: 200px;"></div>
         <p>J'ai eu l'honneur de travailler sur ces projets</p>
       </div>
       <div class="bottom">
@@ -248,30 +262,46 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="container">
-      <h2 class="secTitle">Contact</h2>
-      <div class="lineDot"></div>
-      <p></p>
-      <form action="" method="post">
-        <label for="name">Votre nom</label>
-        <input type="text" name="name" id="name" placeholder="Entrer votre nom">
-        <label for="mail">Votre email</label>
-        <input type="email" name="mail" id="mail" placeholder="Entrer votre email">
-        <label for="msg">Votre message</label>
-        <textarea name="msg" id="msg" placeholder="Entrer votre message"></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
+    <div class="container d-flex flex-column justify-center align-center">
+      <div class="top d-flex flex-column align-center">
+        <h2 class="secTitle">Contact</h2>
+        <div class="lineDot" style="width: 225px"></div>
+        <p>Je suis actuellement à la recherche d'une alternance</p>
+      </div>
+      <div class="bottom d-flex flex-column align-center">
+        <p>Envoyez moi un message</p>
+        <form action="" method="post">
+          <div class="form d-flex flex-column">
+            <div class="formTop d-flex justify-between">
+              <div class="form-control">
+                <label for="name">Votre nom *</label>
+                <input type="text" name="name" id="name" placeholder="Entrer votre nom">
+              </div>
+              <div class="form-control">
+                <label for="mail">Votre email *</label>
+                <input type="email" name="mail" id="mail" placeholder="Entrer votre email">
+              </div>
+            </div>
+            <div class="formMid">
+              <div class="form-control">
+                <label for="msg">Votre message *</label>
+                <textarea name="msg" id="msg" placeholder="Entrer votre message"></textarea>
+              </div>
+            </div>
+            <button type="submit">Envoyer<i class="fa-regular fa-paper-plane"></i></button>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="container d-flex align-center">
-      <p>&amp;2024 DarisKenouche. All rights reserved.</p>
-      <div class="icons">
-        <a href="" class="icon"><i class="fa-brands fa-instagram"></i></a>
-        <a href="" class="icon"><i class="fa-brands fa-discord"></i></a>
-        <a href="" class="icon"><i class="fa-brands fa-github"></i></a>
+    <div class="container d-flex align-center justify-between">
+      <p>2024 DarisKenouche. All rights reserved.</p>
+      <div class="icons d-flex">
+        <a href="https://discordapp.com/users/813439850702176256"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/D4dis/"><i class="fa-brands fa-github"></i></a>
       </div>
     </div>
   </footer>

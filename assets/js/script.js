@@ -1,4 +1,5 @@
 let avaibleKeywords = {
+  'Acceuil': 'home',
   'A propos de moi': 'apropos',
   'Skills': 'skills',
   'Projets': 'projets',
@@ -26,7 +27,11 @@ inputBox.onkeyup = function () {
 function display(result) {
   const content = result.map((key) => {
     let hrefValue = avaibleKeywords[key];
-    return `<a href="#${hrefValue}" onclick="suppInput()"><li>${key}</li></a>`;
+    if(hrefValue == 'home'){
+      return `<a href="#${hrefValue}" onclick="suppInput()" id="homeBtn3"><li>${key}</li></a>`;
+    } else {
+      return `<a href="#${hrefValue}" onclick="suppInput()"><li>${key}</li></a>`;
+    }
   });
   resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
 }
@@ -42,6 +47,12 @@ document.getElementById('search').addEventListener('input', function (evt) {
 btnSupp.addEventListener('click', () => {
   btnSupp.classList.add('hidden');
 })
+
+document.getElementById('search').addEventListener('blur', () => {
+  if(document.getElementById('search').value == ''){
+    btnSupp.classList.add('hidden');
+  }
+});
 
 function selectInput(list) {
   inputBox.value = list.innerHTML;
@@ -70,6 +81,13 @@ window.addEventListener('scroll', handleScroll);
 
 const homeBtn = document.getElementById('homeBtn');
 const homeBtn2 = document.getElementById('homeBtn2');
+document.getElementById('search').addEventListener('change', () => {
+  const homeBtn3 = document.getElementById('homeBtn3');
+  if(homeBtn3){
+    homeBtn3.addEventListener('click', smoothScrollToTop);
+  }
+})
+const homeBtn4 = document.getElementById('homeBtn4');
 
 function smoothScrollToTop() {
   const start = window.scrollY;
@@ -95,3 +113,49 @@ function smoothScrollToTop() {
 
 homeBtn.addEventListener('click', smoothScrollToTop);
 homeBtn2.addEventListener('click', smoothScrollToTop);
+
+homeBtn4.addEventListener('click', smoothScrollToTop);
+
+// ACTIVE CLASS
+
+const buttons = [
+  { id: 'projetsBtn', hash: '#projets' },
+  { id: 'projetsBtn2', hash: '#projets' },
+  { id: 'proposBtn', hash: '#apropos' },
+  { id: 'skillsBtn', hash: '#skills' },
+  { id: 'contactBtn', hash: '#contact' },
+  { id: 'homeBtn2', hash: '#home' },
+  { id: 'homeBtn4', hash: '#home' }
+];
+
+// Fonction pour mettre à jour la classe active des boutons
+const updateActiveButtons = (visibleSectionId) => {
+  buttons.forEach(({ id, hash }) => {
+    const button = document.getElementById(id);
+    if (hash === `#${visibleSectionId}`) {
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
+    }
+  });
+};
+
+// Configuration de l'Intersection Observer
+const observerOptions = {
+  root: null, // Fenêtre d'affichage
+  rootMargin: '0px',
+  threshold: 0.5 // La section doit être visible à 50% pour être considérée comme active
+};
+
+const observerCallback = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const visibleSectionId = entry.target.id;
+      updateActiveButtons(visibleSectionId);
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+document.querySelectorAll('section').forEach((section) => observer.observe(section));
