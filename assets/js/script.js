@@ -128,7 +128,7 @@ const buttons = [
   { id: 'homeBtn4', hash: '#home' }
 ];
 
-// Fonction pour mettre à jour la classe active des boutons
+
 const updateActiveButtons = (visibleSectionId) => {
   buttons.forEach(({ id, hash }) => {
     const button = document.getElementById(id);
@@ -140,11 +140,10 @@ const updateActiveButtons = (visibleSectionId) => {
   });
 };
 
-// Configuration de l'Intersection Observer
 const observerOptions = {
-  root: null, // Fenêtre d'affichage
+  root: null, 
   rootMargin: '0px',
-  threshold: 0.5 // La section doit être visible à 50% pour être considérée comme active
+  threshold: 0.5 
 };
 
 const observerCallback = (entries) => {
