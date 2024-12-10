@@ -1,4 +1,4 @@
-let avaibleKeywords = {
+let availableKeywords = {
   'Acceuil': 'home',
   'A propos de moi': 'apropos',
   'Skills': 'skills',
@@ -13,7 +13,7 @@ inputBox.onkeyup = function () {
   let result = [];
   let input = inputBox.value;
   if (input.length) {
-    result = Object.keys(avaibleKeywords).filter((keyword) => {
+    result = Object.keys(availableKeywords).filter((keyword) => {
       return keyword.toLowerCase().includes(input.toLowerCase());
     });
   }
@@ -26,8 +26,8 @@ inputBox.onkeyup = function () {
 
 function display(result) {
   const content = result.map((key) => {
-    let hrefValue = avaibleKeywords[key];
-    if(hrefValue == 'home'){
+    let hrefValue = availableKeywords[key];
+    if (hrefValue == 'home') {
       return `<a href="#${hrefValue}" onclick="suppInput()" id="homeBtn3"><li>${key}</li></a>`;
     } else {
       return `<a href="#${hrefValue}" onclick="suppInput()"><li>${key}</li></a>`;
@@ -35,6 +35,29 @@ function display(result) {
   });
   resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
 }
+
+function displayAll() {
+  const content = Object.entries(availableKeywords).map(([key, hrefValue]) => {
+    if (hrefValue == 'home') {
+      return `<a href="#${hrefValue}" onclick="suppInput()" id="homeBtn5"><li>${key}</li></a>`;
+    } else {
+      return `<a href="#${hrefValue}" onclick="suppInput()"><li>${key}</li></a>`;
+    }
+  });
+  resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
+}
+
+inputBox.addEventListener('click', () => {
+  if(inputBox.value == ''){
+    displayAll();
+    inputBox.addEventListener('focusout', () => {
+      setTimeout(() => {
+        suppInput();
+      }, 100);
+    })
+  }
+})
+
 
 // INPUT
 
@@ -49,7 +72,7 @@ btnSupp.addEventListener('click', () => {
 })
 
 document.getElementById('search').addEventListener('blur', () => {
-  if(document.getElementById('search').value == ''){
+  if (document.getElementById('search').value == '') {
     btnSupp.classList.add('hidden');
   }
 });
@@ -83,11 +106,17 @@ const homeBtn = document.getElementById('homeBtn');
 const homeBtn2 = document.getElementById('homeBtn2');
 document.getElementById('search').addEventListener('change', () => {
   const homeBtn3 = document.getElementById('homeBtn3');
-  if(homeBtn3){
+  if (homeBtn3) {
     homeBtn3.addEventListener('click', smoothScrollToTop);
   }
 })
 const homeBtn4 = document.getElementById('homeBtn4');
+document.getElementById('search').addEventListener('click', () => {
+  const homeBtn5 = document.getElementById('homeBtn5');
+  if (homeBtn5) {
+    homeBtn5.addEventListener('click', smoothScrollToTop);
+  }
+})
 
 function smoothScrollToTop() {
   const start = window.scrollY;
@@ -97,9 +126,9 @@ function smoothScrollToTop() {
   function scrollStep(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    const ease = progress < 0.5 
-      ? 2 * progress * progress 
-      : 1 - Math.pow(-2 * progress + 2, 2) / 2; 
+    const ease = progress < 0.5
+      ? 2 * progress * progress
+      : 1 - Math.pow(-2 * progress + 2, 2) / 2;
 
     window.scrollTo(0, start * (1 - ease));
 
@@ -141,9 +170,9 @@ const updateActiveButtons = (visibleSectionId) => {
 };
 
 const observerOptions = {
-  root: null, 
+  root: null,
   rootMargin: '0px',
-  threshold: 0.5 
+  threshold: 0.5
 };
 
 const observerCallback = (entries) => {
