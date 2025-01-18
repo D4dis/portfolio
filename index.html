@@ -64,11 +64,16 @@
   <!-- TRAVEL BUTTON -->
   <div class="travel">
     <div class="icons d-flex flex-column align-center justify-center">
-      <div class="bubble" id="homeBtn4"><a href="#home" class="d-flex justify-center align-center"><i class="fa-solid fa-house"></i></a></div>
-      <div class="bubble" id="proposBtn"><a href="#apropos" class="d-flex justify-center align-center"><i class="fa-solid fa-user"></i></a></div>
-      <div class="bubble" id="skillsBtn"><a href="#skills" class="d-flex justify-center align-center"><i class="fa-solid fa-code"></i></a></div>
-      <div class="bubble" id="projetsBtn2"><a href="#projets" class="d-flex justify-center align-center"><i class="fa-solid fa-desktop"></i></a></div>
-      <div class="bubble" id="contactBtn"><a href="#contact" class="d-flex justify-center align-center"><i class="fa-solid fa-envelope"></i></a></div>
+      <div class="bubble" id="homeBtn4"><a href="#home" class="d-flex justify-center align-center"><i
+            class="fa-solid fa-house"></i></a></div>
+      <div class="bubble" id="proposBtn"><a href="#apropos" class="d-flex justify-center align-center"><i
+            class="fa-solid fa-user"></i></a></div>
+      <div class="bubble" id="skillsBtn"><a href="#skills" class="d-flex justify-center align-center"><i
+            class="fa-solid fa-code"></i></a></div>
+      <div class="bubble" id="projetsBtn2"><a href="#projets" class="d-flex justify-center align-center"><i
+            class="fa-solid fa-desktop"></i></a></div>
+      <div class="bubble" id="contactBtn"><a href="#contact" class="d-flex justify-center align-center"><i
+            class="fa-solid fa-envelope"></i></a></div>
     </div>
   </div>
 
@@ -226,14 +231,14 @@
           <p class="text-css">css</p>
         </div>
         <div class="comp d-flex flex-column align-center">
-          <div class="bg-round d-flex justify-center align-center php"><i class="fa-brands fa-php"></i>
-          </div>
-          <p class="text-php">php</p>
-        </div>
-        <div class="comp d-flex flex-column align-center">
           <div class="bg-round d-flex justify-center align-center js"><i class="fa-brands fa-square-js"></i>
           </div>
           <p class="text-js">js</p>
+        </div>
+        <div class="comp d-flex flex-column align-center">
+          <div class="bg-round d-flex justify-center align-center php"><i class="fa-brands fa-php"></i>
+          </div>
+          <p class="text-php">php</p>
         </div>
         <div class="comp d-flex flex-column align-center">
           <div class="bg-round d-flex justify-center align-center sql"><i class="fa-solid fa-database"></i>
@@ -278,17 +283,17 @@
             <div class="formTop d-flex justify-between">
               <div class="form-control">
                 <label for="name">Votre nom *</label>
-                <input type="text" name="name" id="name" placeholder="Entrer votre nom">
+                <input type="text" name="name" id="name" placeholder="Entrer votre nom" required>
               </div>
               <div class="form-control">
                 <label for="mail">Votre email *</label>
-                <input type="email" name="mail" id="mail" placeholder="Entrer votre email">
+                <input type="email" name="mail" id="mail" placeholder="Entrer votre email" required>
               </div>
             </div>
             <div class="formMid">
               <div class="form-control">
                 <label for="msg">Votre message *</label>
-                <textarea name="msg" id="msg" placeholder="Entrer votre message"></textarea>
+                <textarea name="msg" id="msg" placeholder="Entrer votre message" required></textarea>
               </div>
             </div>
             <button type="submit">Envoyer<i class="fa-regular fa-paper-plane"></i></button>

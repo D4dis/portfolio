@@ -33,7 +33,7 @@ function display(result) {
       return `<a href="#${hrefValue}" onclick="suppInput()"><li>${key}</li></a>`;
     }
   });
-  resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
+  resultsBox.innerHTML = `<ul class ="d-flex flex-column">` + content.join('') + "</ul>";
 }
 
 function displayAll() {
@@ -44,7 +44,7 @@ function displayAll() {
       return `<a href="#${hrefValue}" onclick="suppInput()"><li>${key}</li></a>`;
     }
   });
-  resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
+  resultsBox.innerHTML = `<ul class="d-flex flex-column">` + content.join('') + "</ul>";
 }
 
 inputBox.addEventListener('click', () => {
