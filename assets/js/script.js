@@ -187,27 +187,3 @@ const observerCallback = (entries) => {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
 document.querySelectorAll('section').forEach((section) => observer.observe(section));
-
-// NUMBER COUNTER
-
-const counters = document.querySelectorAll(".counters span");
-const container = document.querySelector(".counters");
-
-let activated = false;
-
-counters.forEach(counter => {
-  counter.innerText = 0;
-  let count = 0;
-  function updateCount() {
-    const target = parseInt(counter.dataset.count);
-    console.log(target)
-    if(count < target) {
-      count++;
-      counter.innerText = count;
-      setTimeout(updateCount, 10);
-    } else {
-      counter.innerText = target;
-    }
-  }
-  updateCount();
-})
