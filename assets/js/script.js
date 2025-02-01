@@ -58,6 +58,25 @@ inputBox.addEventListener('click', () => {
   }
 })
 
+// SEARCH BAR RESPONSIVE
+
+document.addEventListener("DOMContentLoaded", function () {
+  const searchBar = document.querySelector(".search-bar");
+  const searchButton = document.getElementById("searchBtn");
+
+  searchButton.addEventListener("click", function (event) {
+    event.stopPropagation();
+    searchBar.classList.toggle("active");
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!searchBar.contains(event.target)) {
+      searchBar.classList.remove("active");
+    }
+  });
+});
+
+
 
 // INPUT
 

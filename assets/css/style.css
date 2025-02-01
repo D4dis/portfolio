@@ -54,7 +54,7 @@ ul {
 }
 
 .hidden {
-  opacity: 0;
+  display: none;
 }
 
 nav.scrolled {
@@ -660,7 +660,7 @@ nav.scrolled {
 }
 
 .skills .js {
-  background-color: #E7A020;
+  background-color: #efd91c;
 }
 
 .skills .php {
@@ -691,7 +691,7 @@ nav.scrolled {
 }
 
 .skills .text-js {
-  color: #E7A020;
+  color: #efd91c;
 }
 
 .skills .text-php {
@@ -728,10 +728,14 @@ nav.scrolled {
   color: #FFF;
 }
 
-.projets .bottom a {
+.projets .bottom {
+  width: 100%;
   position: relative;
-  left: 500px;
-  top: 90px;
+}
+
+.projets .bottom a {
+  position: absolute;
+  inset: 60px 610px auto auto;
   color: #12F7D6;
   font-family: 'IMB Plex Mono', monospace;
   font-size: 24px;
@@ -752,8 +756,11 @@ nav.scrolled {
 }
 
 .projets .screen {
+  width: 100%;
   gap: 64px;
 }
+
+.projets 
 
 .projets .screen button {
   width: 72px;
@@ -920,9 +927,13 @@ footer .icons a:hover {
 
 /* RESPONSIVE */
 
-@media (max-width: 1280px) {
+@media (max-width: 1320px) {
   .container {
     padding: 128px;
+  }
+
+  .navbar .container {
+    padding: 0 64px;
   }
 
   .navbar .social span {
@@ -934,10 +945,14 @@ footer .icons a:hover {
     margin-top: 32px;
   }
 
+  .main-page .container {
+    padding-top: 64px;
+  }
+
   .main-page .bot {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre la card */
+    align-items: center;
     gap: 20px;
   }
 
@@ -946,7 +961,7 @@ footer .icons a:hover {
     max-width: 400px;
   }
 
-  .main-page .content { /* Nouvelle div englobant .mid et .right */
+  .main-page .content {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -954,11 +969,96 @@ footer .icons a:hover {
   }
 
   .main-page .mid {
-    flex: 1; /* Garde la largeur dynamique */
+    flex: 1;
     text-align: left;
   }
 
   .main-page .right {
-    flex-shrink: 0; /* Empêche de réduire */
+    flex-shrink: 0;
   }
+
+  .apropos .container {
+    flex-direction: column;
+  }
+
+  .projets .container {
+    padding: 0 64px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .navbar .right .links li .search-bar {
+    width: 50px;
+    background: transparent;
+    border-radius: 5px;
+    position: relative;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .navbar .right .links li .search-bar.active {
+    width: 150px;
+    background: #FFF;
+  }
+
+  .navbar .right .links li .search-bar .row {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+  }
+  
+  .navbar .right .links li .search-bar.active input {
+    display: block;
+  }
+  
+  .navbar .right .links li .search-bar input {
+    width: 70px;
+    flex: 1;
+    height: 20px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    display: none;
+  }
+
+  .navbar .right .links li .search-bar button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .navbar .right .links li .search-bar button#searchBtn {
+    z-index: 5;
+    padding: 5px;
+    color: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 50px;
+  }
+
+  .navbar .right .links li .search-bar button:first-of-type {
+    margin-right: 5px;
+  }
+  .navbar .right .links li .search-bar .result-box ul {
+    border-top: 1px solid #999;
+    padding: 10px 15px;
+    display: none;
+  }
+
+  .navbar .right .links li .search-bar.active .result-box ul {
+    display: block;
+  }
+
+}
+
+@media (max-width: 960px) {
+
+  .navbar .container {
+    padding: 0 32px;
+  }
+
+  .travel {
+    display: none;
+  }
+
 }

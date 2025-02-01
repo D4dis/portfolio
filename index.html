@@ -37,7 +37,7 @@
                 <input type="text" name="search" id="search" autocomplete="off">
                 <button class="hidden" type="button" onclick="suppInput()" id="suppInput"><i
                     class="fa-solid fa-xmark"></i></button>
-                <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button id="searchBtn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
               </div>
               <div class="result-box">
               </div>
@@ -264,7 +264,7 @@
       </div>
       <div class="bottom">
         <a href="">Voir le Site<i class="fa-solid fa-arrow-pointer"></i></a>
-        <div class="screen d-flex align-center">
+        <div class="screen d-flex justify-center align-center">
           <button type="button"><i class="fa-solid fa-chevron-left"></i></button>
           <img src="assets/img/Dual-screen.png" alt="">
           <button type="button"><i class="fa-solid fa-chevron-right"></i></button>
@@ -288,11 +288,11 @@
             <div class="formTop d-flex justify-between">
               <div class="form-control">
                 <label for="name">Votre nom *</label>
-                <input type="text" name="name" id="name" placeholder="Entrer votre nom" required>
+                <input type="text" name="name" id="name" placeholder="Nom + Prenom" required>
               </div>
               <div class="form-control">
                 <label for="mail">Votre email *</label>
-                <input type="email" name="mail" id="mail" placeholder="Entrer votre email" required>
+                <input type="email" name="mail" id="mail" placeholder="exemple@email.com" required>
               </div>
             </div>
             <div class="formMid">
