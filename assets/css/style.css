@@ -675,6 +675,14 @@ nav.scrolled {
   background-color: #fe080a;
 }
 
+.skills .react {
+  background-color: #61DBFB;
+}
+
+.skills .node {
+  background-color: #68a063;
+}
+
 .skills .bot p {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 32px;
@@ -704,6 +712,14 @@ nav.scrolled {
 
 .skills .text-sql {
   color: #fe080a;
+}
+
+.skills .text-react {
+  color: #61DBFB;
+}
+
+.skills .text-node {
+  color: #68a063;
 }
 
 
