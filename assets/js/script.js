@@ -206,3 +206,29 @@ const observerCallback = (entries) => {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
 document.querySelectorAll('section').forEach((section) => observer.observe(section));
+
+// Mobile responsive
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navbar .right")
+  const menuToggle = document.createElement("div")
+  menuToggle.className = "menu-toggle"
+  menuToggle.innerHTML = "<span></span><span></span><span></span>"
+  navbar.prepend(menuToggle)
+
+  const links = document.querySelector(".navbar .right .links")
+
+  menuToggle.addEventListener("click", function () {
+    this.classList.toggle("active")
+    links.classList.toggle("active")
+  })
+
+  const navLinks = document.querySelectorAll(".navbar .right .links a")
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menuToggle.classList.remove("active")
+      links.classList.remove("active")
+    })
+  })
+})
+

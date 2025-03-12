@@ -760,9 +760,7 @@ nav.scrolled {
   gap: 64px;
 }
 
-.projets 
-
-.projets .screen button {
+.projets .projets .screen button {
   width: 72px;
   height: 72px;
   background-color: #292F36;
@@ -1006,11 +1004,11 @@ footer .icons a:hover {
     align-items: center;
     padding: 5px 15px;
   }
-  
+
   .navbar .right .links li .search-bar.active input {
     display: block;
   }
-  
+
   .navbar .right .links li .search-bar input {
     width: 70px;
     flex: 1;
@@ -1039,6 +1037,7 @@ footer .icons a:hover {
   .navbar .right .links li .search-bar button:first-of-type {
     margin-right: 5px;
   }
+
   .navbar .right .links li .search-bar .result-box ul {
     border-top: 1px solid #999;
     padding: 10px 15px;
@@ -1052,13 +1051,486 @@ footer .icons a:hover {
 }
 
 @media (max-width: 960px) {
+  .navbar .right .links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #1a1e23;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    gap: 40px;
+    transition: 0.3s;
+    z-index: 999;
+  }
+
+  .navbar .right .links.active {
+    left: 0;
+  }
 
   .navbar .container {
-    padding: 0 32px;
+    position: relative;
   }
 
-  .travel {
-    display: none;
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+    width: 30px;
+    height: 20px;
+    position: relative;
   }
 
+  .menu-toggle span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+  .menu-toggle span:nth-child(1) {
+    top: 0px;
+  }
+
+  .menu-toggle span:nth-child(2) {
+    top: 8px;
+  }
+
+  .menu-toggle span:nth-child(3) {
+    top: 16px;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    top: 8px;
+    transform: rotate(135deg);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-135deg);
+  }
+}
+
+@media (max-width: 960px) {
+  .container {
+    padding: 64px 32px;
+  }
+
+  .main-page .top h2 {
+    font-size: 72px;
+  }
+
+  .main-page .bot .mid h1 {
+    font-size: 48px;
+  }
+
+  .main-page .bot .mid h1 span.txt {
+    font-size: 48px;
+  }
+
+  .main-page .bot .left {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .main-page .content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main-page .bot .mid {
+    width: 100%;
+    margin-top: 40px;
+    order: 2;
+  }
+
+  .main-page .bot .right {
+    margin-top: 40px;
+    order: 3;
+    width: 100%;
+    height: auto;
+  }
+
+  .main-page .bot .right .container-sm {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  .apropos .container .right img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 960px) {
+  .skills .mid {
+    gap: 40px;
+  }
+
+  .skills .bot {
+    gap: 40px;
+  }
+
+  .skills .comp {
+    width: 120px;
+    margin-bottom: 30px;
+  }
+
+  .skills .bg-round {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skills .bg-round i {
+    font-size: 48px;
+  }
+
+  .skills .bot p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 960px) {
+  .projets .bottom a {
+    position: static;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .projets .screen img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .projets .screen {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  .contact .formTop {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact .bottom p {
+    font-size: 24px;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 40px 16px;
+  }
+
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar .container {
+    padding: 0 16px;
+  }
+
+  .navbar .left h1 {
+    font-size: 24px;
+  }
+
+  .navbar .left span {
+    font-size: 24px;
+  }
+
+  .main-page .top h2 {
+    font-size: 48px;
+  }
+
+  .main-page .bot .mid h1 {
+    font-size: 32px;
+    margin-left: 0;
+  }
+
+  .main-page .bot .mid h1 span.txt {
+    font-size: 32px;
+  }
+
+  .main-page .bot .mid h1 span.margin {
+    margin-left: 8px;
+  }
+
+  .main-page .bot .mid p {
+    margin-left: 0;
+  }
+
+  .main-page .bot .mid p.contactTxt {
+    font-size: 24px;
+    margin-left: 0;
+  }
+
+  .secTitle {
+    font-size: 48px;
+  }
+
+  .apropos .container .left .top h2 {
+    font-size: 48px;
+  }
+
+  .apropos .container .left .bot .txt p.title {
+    font-size: 24px;
+  }
+
+  .skills .bot {
+    justify-content: space-around;
+  }
+
+  .contact .bottom p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .contact .form button {
+    width: 100%;
+  }
+
+  footer .container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+    height: auto;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .container {
+    padding: 32px 12px;
+  }
+
+  .navbar .left h1 {
+    font-size: 18px;
+  }
+
+  .navbar .left span {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+  .main-page .top h2 {
+    font-size: 36px;
+  }
+
+  .main-page .bot .mid h1 {
+    font-size: 24px;
+  }
+
+  .main-page .bot .mid h1 span.txt {
+    font-size: 24px;
+  }
+
+  .main-page .bot .mid p {
+    font-size: 14px;
+  }
+
+  .main-page .bot .mid p.contactTxt {
+    font-size: 20px;
+  }
+
+  .main-page .bot .left .card {
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+
+  .main-page .bot .left .card h1 {
+    font-size: 24px;
+  }
+
+  .main-page .bot .left .card p {
+    font-size: 12px;
+  }
+
+  .main-page .bot .left .card .language {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .main-page .bot .left .card a.btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .main-page .bot .right .container-sm {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .main-page .bot .right .item span {
+    font-size: 36px;
+  }
+
+  .secTitle {
+    font-size: 36px;
+  }
+
+  .lineDot {
+    width: 100px;
+  }
+
+  .apropos .container .left .top {
+    max-width: 100%;
+  }
+
+  .apropos .container .left .top h2 {
+    font-size: 36px;
+  }
+
+  .apropos .container .left .bot {
+    padding: 16px 20px;
+  }
+
+  .apropos .container .left .bot .txt p.title {
+    font-size: 24px;
+  }
+
+  .apropos .container .left .bot .txt p {
+    font-size: 14px;
+  }
+
+  .skills .mini-card {
+    padding: 12px 16px;
+  }
+
+  .skills .mini-card i {
+    font-size: 24px;
+  }
+
+  .skills .mini-card h3 {
+    font-size: 18px;
+  }
+
+  .skills .mini-card p {
+    font-size: 14px;
+  }
+
+  .skills .bot {
+    gap: 20px;
+  }
+
+  .skills .comp {
+    width: 90px;
+    margin-bottom: 20px;
+  }
+
+  .skills .bg-round {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 12px;
+  }
+
+  .skills .bg-round i {
+    font-size: 36px;
+  }
+
+  .skills .bot p {
+    font-size: 16px;
+  }
+
+  .projets .screen {
+    gap: 10px;
+  }
+
+  .projets .screen button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .projets .screen i {
+    font-size: 18px;
+  }
+
+  .contact .bottom p {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+
+  .contact .form-control label {
+    font-size: 14px;
+  }
+
+  .contact .form-control input,
+  .contact .form-control textarea {
+    font-size: 14px;
+  }
+
+  .contact .form button {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  footer .icons {
+    gap: 16px;
+  }
+
+  footer .icons a {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar .left h1 {
+    font-size: 16px;
+  }
+
+  .navbar .left span {
+    font-size: 16px;
+  }
+
+  .main-page .top h2 {
+    font-size: 32px;
+  }
+
+  .secTitle {
+    font-size: 32px;
+  }
+
+  .skills .comp {
+    width: 80px;
+  }
+
+  .skills .bg-round {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skills .bg-round i {
+    font-size: 32px;
+  }
+
+  .skills .bot p {
+    font-size: 14px;
+  }
 }
